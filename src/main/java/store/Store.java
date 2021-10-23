@@ -37,15 +37,5 @@ public class Store {
         }
     }
 
-//    public static void main(String[] args) {
-//        Store store = new Store();
-//        Flower flower = new Flower();
-//        flower.setFlowerType(FlowerTypes.CHAMOMILE);
-//        int[] color = {127, 0, 0};
-//        flower.setColor(color);
-//        flower.setPrice(23.50);
-//        store.getFlower(flower);
-//        System.out.println(store.search("CHAMOMILE"));
-//    }
 
 }
