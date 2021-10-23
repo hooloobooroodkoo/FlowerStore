@@ -1,4 +1,4 @@
-import flowers.Flower;
+import store.Flower;
 public class Program {
     public static void main(String[] args) {
         Flower[] flowers = new Flower[3];

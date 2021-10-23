@@ -1,0 +1,51 @@
+package store;
+
+import java.util.ArrayList;
+import java.util.Hashtable;
+import java.util.List;
+
+public class Store {
+    List<Flower> chamomile = new ArrayList<Flower>();
+    List<Flower> tulip = new ArrayList<Flower>();
+    List<Flower> rose = new ArrayList<Flower>();
+    Hashtable<String, Double> prices = new Hashtable<String, Double>();
+
+
+    public void getFlower(Flower flower) {
+        if (flower.getFlowerType().toString().equals("ROSE")) {
+            rose.add(flower);
+
+        }
+        if (flower.getFlowerType().toString().equals("TULIP")) {
+            tulip.add(flower);
+        }
+        if (flower.getFlowerType().toString().equals("CHAMOMILE")) {
+            chamomile.add(flower);
+        }
+        prices.put(flower.getFlowerType().toString(), flower.getPrice());
+    }
+
+    public String search(String flowerType) {
+        if (flowerType.equals("ROSE")) {
+            return "Number of roses: " + rose.size() +"\nPrice: " + prices.get(flowerType);
+        }
+        else if (flowerType.equals("TULIP")) {
+            return "Number of tulips: " + tulip.size() +"\nPrice: " + prices.get(flowerType);
+        }
+        else {
+            return "Number of chamomiles: " + chamomile.size() +"\nPrice: " + prices.get(flowerType);
+        }
+    }
+
+//    public static void main(String[] args) {
+//        Store store = new Store();
+//        Flower flower = new Flower();
+//        flower.setFlowerType(FlowerTypes.CHAMOMILE);
+//        int[] color = {127, 0, 0};
+//        flower.setColor(color);
+//        flower.setPrice(23.50);
+//        store.getFlower(flower);
+//        System.out.println(store.search("CHAMOMILE"));
+//    }
+
+}
